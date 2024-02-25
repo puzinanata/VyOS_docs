@@ -42,7 +42,7 @@ cd /home/infra/Downloads
 # to download file (the latest build) to current directory
 wget https://github.com/vyos/vyos-rolling-nightly-builds/releases/download/1.5-rolling-202402251233/vyos-1.5-rolling-202402251233-amd64.iso
 ```
-### Step 3. Installation virtual machine.qq  
+### Step 3. Installation virtual machine.
 In local station you should run in terminal bash code below:
 ```
 virt-manager --connect="qemu+ssh://infra@192.168.1.78/system?socket=/var/run/libvirt/libvirt-sock"
