@@ -34,7 +34,7 @@ infra@infra:~$
 Install virt-manager according to instruction by link:
 https://gist.github.com/davesilva/da709c6f6862d5e43ae9a86278f79188
 
-In topic "Available builds" you should choose the latest build, Copy Link Address ( in menu by right click of mouse) and insert link to terminal bash with code below:
+Go to link https://vyos.net/get/nightly-builds/ and in topic "Available builds" you should choose the latest build, Copy Link Address ( in menu by right click of mouse) and insert link to terminal bash with code below:
 
 ```bash
 # change directory 
@@ -42,8 +42,8 @@ cd /home/infra/Downloads
 # to download file (the latest build) to current directory
 wget https://github.com/vyos/vyos-rolling-nightly-builds/releases/download/1.5-rolling-202402251233/vyos-1.5-rolling-202402251233-amd64.iso
 ```
-### Step 3. Installation virtual machine to local station 
-Then in local station you should run in terminal bash code below:
+### Step 3. Installation virtual machine.qq  
+In local station you should run in terminal bash code below:
 ```
 virt-manager --connect="qemu+ssh://infra@192.168.1.78/system?socket=/var/run/libvirt/libvirt-sock"
 ```
