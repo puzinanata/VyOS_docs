@@ -62,5 +62,7 @@ In Virtual Machine Manager to do:
     password: vyos
 Expected output: Welcome to VyOS!
 
+### Step 4. Installation VyOS to VM
+
 
 
