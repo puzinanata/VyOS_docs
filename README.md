@@ -55,14 +55,133 @@ In Virtual Machine Manager to do:
 4. Choose Memory=2048 and CPUs=1 then "Forward"
 5. Put 4 GB to field "Create a disk image for virtual machine"then "Forward"
 6. Put name "VyOS-NP" and mark "Customize configuration before install" then "Finish"
-7. In opened menu choose item "Display spice" and choose Type - "VNC server", Listen type -"Address", Address - "All interfaces" then "Apply"
+7. Delete item "Display spice" in the left menu
 8. Push button (the first left button in the top) "Begin installation"
 9. After running Virtual machine put 
     login: vyos 
     password: vyos
-Expected output: Welcome to VyOS!
+Expected output after login:
+```
+Welcome to VyOS!
+
+Check out project news at https://blog.vyos.io
+and feel free to report bugs at https://vyos.dev
+
+You can change this banner using "set system login banner post-login" command.
+
+VyOS is a free software distribution that includes multiple components,
+you can check individual component licenses under /usr/share/doc/*/copyright
+```
 
 ### Step 4. Installation VyOS to VM
 
+In opened Linux terminal you should do following steps for installation VyOS to virtual machine as image:
 
+run code 
+```
+install image
+```
+push "enter"
 
+Expected output:
+```
+Welcome to VyOS installation!
+This command will install VyOS to your permanent storage.
+Would you like to continue? [y/N] 
+```
+type
+```
+y
+```
+push "enter"
+
+Expected output:
+```
+What would you like to name this image? (Default: 1.5-rolling-202402251233)
+```
+push "enter"
+
+Expected output:
+```
+Please enter a password for the "vyos" user (Default: vyos)
+```
+push "enter"
+
+Expected output:
+```
+What console should be used by default? (K: KVM, S: Serial, U: USB-Serial)? (Default: K)
+```
+type
+```
+S
+```
+push "enter"
+
+Expected output:
+```
+Probing disks
+1 disk(s) found
+The following disks were found:
+Drive: /dev/vda (4.0 GB)
+Which one should be used for installation? (Default: /dev/vda) 
+```
+push "enter"
+
+Expected output:
+```
+Installation will delete all data on the drive. Continue? [y/N]
+ ```
+type
+```
+y
+```
+push "enter"
+
+Expected output:
+```
+Searching for data from previous installations
+No previous installation found
+Would you like to use all the free space on the drive? [Y/n]
+ ```
+type
+```
+y
+```
+push "enter"
+
+Expected output:
+```
+Creating partition table...
+Creating temporary directories
+Mounting new partitions
+Creating a configuration file
+Copying system image files
+Installing GRUB configuration files
+Installing GRUB to the drive
+Cleaning up
+Unmounting target filesystems
+Removing temporary files
+The image installed successfully; please reboot now.
+```
+run code
+```
+reboot
+```
+After reboot put 
+```
+ login: vyos 
+ password: vyos
+```
+Expected output after login:
+```
+Welcome to VyOS!
+
+Check out project news at https://blog.vyos.io
+and feel free to report bugs at https://vyos.dev
+
+You can change this banner using "set system login banner post-login" command.
+
+VyOS is a free software distribution that includes multiple components,
+you can check individual component licenses under /usr/share/doc/*/copyright
+```
+Congratulations! You installed VyOS to VM.
